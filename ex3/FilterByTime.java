@@ -27,9 +27,10 @@ public class FilterByTime {
 		while (scanner.hasNext()){
 			// 对每行进行处理
 			String line = scanner.nextLine();
+			String[] data=line.split(" ");
 			// 切分获取IP，Time
-			String strIp = null;
-			String strTime = null;
+			String strIp = data[0];
+			String strTime = data[5];
 			// 对在时间区间内的数据进行输出
 			System.out.println(strIp + "\t" + strTime);
 		}
